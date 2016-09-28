@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/news"
+            android:icon="@drawable/news"
+            android:title="@string/news" />
+        <item
+            android:id="@+id/write_diary"
+            android:icon="@drawable/write_diary"
+            android:title="@string/write_diary" />
+        <item
+            android:id="@+id/personal_info"
+            android:icon="@drawable/personal_info"
+            android:title="@string/personal_info" />
+
+    </group>
+
+    <group android:checkableBehavior="single">
+            <item
+                android:id="@+id/friendlist"
+                android:icon="@drawable/friendlist"
+                android:title="@string/friend" />
+            <item
+                android:id="@+id/friend_invitation"
+                android:icon="@drawable/friend_invitation"
+                android:title="@string/friend_invitation" />
+    </group>
+
+    <group android:checkableBehavior="single">
+            <item
+                android:id="@+id/tool"
+                android:icon="@drawable/tool"
+                android:title="@string/tool" />
+        </group>
+
+    <item android:title="@string/developer">
+        <menu>
+            <item
+                android:id="@+id/developer"
+                android:icon="@drawable/about_us"
+                android:title="@string/developer" />
+        </menu>
+    </item>
+
+</menu>

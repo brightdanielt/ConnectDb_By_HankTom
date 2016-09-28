@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+        <style name="selectorDialog" parent="@android:style/Theme.Dialog">
+
+<!-- 邊框 -->
+                <!--<item name="android:windowFrame"></item>-->
+
+<!-- 是否浮现在activity之上 -->
+                <item name="android:windowIsFloating">true</item>
+
+<!-- 整個 layout 半透明 -->
+                <item name="android:windowIsTranslucent">true</item>
+
+<!-- 拿掉標題 -->
+                <item name="android:windowNoTitle">true</item>
+
+<!-- 背景圖片 -->
+                <item name="android:windowBackground">@drawable/dialog_bg</item>
+
+                <!--<item name="android:background">@drawable/dialog_bg</item>-->
+
+<!-- 由 XML 設定 Dialog 視窗是否變暗 -->
+                <item name="android:backgroundDimEnabled">true</item>
+
+<!-- dialog外的背景，亮度從 0 到 1.0 -->
+                <item name="android:backgroundDimAmount">0.5</item>
+
+                <item name="android:drawSelectorOnTop">true</item>
+
+                <item name="android:paddingTop">5dp</item>
+
+                <item name="android:paddingBottom">0dp</item>
+
+                <item name="android:paddingLeft">0dp</item>
+
+                <item name="android:paddingRight">0dp</item>
+
+                <item name="android:gravity">center</item>
+
+                <item name="android:layout_gravity"> center</item>
+
+<!--title text color-->
+                <item name="android:textColor">@color/red</item>
+
+<!--button text color-->
+                <item name="android:colorAccent">@color/red</item>
+
+<!--message text color-->
+                <item name="android:textColorPrimary">@color/black</item>
+
+        </style>
+</resources>

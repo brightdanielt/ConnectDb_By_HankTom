@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.danielt.connectdb_by_hanktom.Create_diary"
+    tools:showIn="@layout/activity_create_diary"
+    android:background="@drawable/blue_background"
+    android:foreground="@drawable/blue_foreground">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollview_pic"
+        android:layout_marginTop="@dimen/big_margin_to_bg"
+        android:fillViewport="false"
+        android:layout_marginBottom="@dimen/big_margin_to_bg"
+        android:layout_marginLeft="@dimen/margin_to_bg"
+        android:layout_marginRight="@dimen/margin_to_bg">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:weightSum="1"
+            android:addStatesFromChildren="false">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/btn_edit"
+                        android:layout_toStartOf="@+id/btn_edit">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/title"
+                            android:id="@+id/tv_account"
+                            android:layout_row="1"
+                            android:layout_column="4"
+                            android:textColor="@color/accent_material_light"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:textSize="@dimen/tv_title_size" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/ed_title"
+                            android:enabled="false"
+                            android:inputType="textMultiLine"
+                            android:maxLength="@integer/diary_title_length"
+                            android:textColor="@color/title"
+                            android:singleLine="true"
+                            android:textSize="@dimen/ed_content_size"
+                            android:layout_toLeftOf="@+id/btn_edit"
+                            android:layout_toRightOf="@+id/tv_account"
+                            android:layout_toEndOf="@+id/tv_account"
+                            android:layout_marginLeft="30dp" />
+
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btn_edit"
+                        android:enabled="false"
+                        android:background="@drawable/btn_edit"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearLayout"
+                android:layout_alignRight="@+id/btn_edit"
+                android:layout_alignEnd="@+id/btn_edit"
+                android:id="@+id/linearLayout2">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editText"
+                    android:text="@string/mood"
+                    android:layout_alignTop="@+id/tv_date"
+                    android:layout_toLeftOf="@+id/ed_mood"
+                    android:layout_toStartOf="@+id/ed_mood"
+                    android:layout_row="2"
+                    android:layout_column="0"
+                    android:textColor="@color/accent_material_light"
+                    android:textSize="@dimen/tv_title_size" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ed_mood"
+                    android:layout_alignBottom="@+id/editText"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_row="2"
+                    android:layout_column="1"
+                    android:enabled="false"
+                    android:layout_weight="1"
+                    android:textColor="@color/date"
+                    android:singleLine="true"
+                    android:maxLength="@integer/mood_length"
+                    android:textSize="@dimen/ed_content_size"
+                    android:layout_marginLeft="30dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linearLayout"
+                android:layout_below="@+id/btn_edit"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/date"
+                        android:id="@+id/tv_date"
+                        android:layout_row="1"
+                        android:layout_column="0"
+                        android:textColor="@color/date"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:textSize="@dimen/tv_title_size" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mark_diary"
+                        android:id="@+id/checkMark"
+                        android:checked="false"
+                        android:layout_row="0"
+                        android:layout_column="7"
+                        android:textColor="@color/accent_material_light"
+                        android:enabled="false"
+
+
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:textSize="@dimen/tv_title_size" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/scrollView2"
+                android:fillViewport="false">
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/ed_diary_text"
+                    android:background="@color/diary_text_bg"
+                    android:layout_marginTop="15dp"
+                    android:enabled="false"
+                    android:layout_below="@+id/linearLayout2"
+                    android:textColor="@color/diary_text"
+                    android:imeOptions="actionDone"
+                    android:hint="@string/ed_diary_hint"
+                    android:minHeight="50dp"
+                    android:textSize="@dimen/ed_content_size" />
+            </ScrollView>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/margin_to_bg">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:id="@+id/imgView_choosePic"
+                        android:src="@android:drawable/ic_menu_gallery"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:visibility="invisible"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:id="@+id/imgView_pic"
+                android:layout_row="2"
+                android:layout_column="4"
+                android:enabled="false"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/margin_to_bg" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer name="diary_title_length">20</integer>
+    <integer name="mood_length">10</integer>
+    <integer name="address_length">50</integer>
+    <integer name="uid_length">6</integer>
+    <integer name="simple_diary_text_length">28</integer>
+    <integer name="verification_code_length">6</integer>
+    <integer name="account_length">50</integer>
+    <integer name="password_length">25</integer>
+    <integer name="account_maxline">1</integer>
+    <integer name="password_maxline">1</integer>
+
+    <integer name="address_line_max">3</integer>
+
+    <integer name="anim_friend_listView_duration">1000</integer>
+
+    <integer name="bg_gradient_angle">90</integer>
+
+</resources>

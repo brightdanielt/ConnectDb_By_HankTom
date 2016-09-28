@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.danielt.connectdb_by_hanktom.Load_friend_info"
+    android:background="@drawable/blue_background"
+    android:foreground="@drawable/blue_foreground">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/big_margin_to_bg"
+        android:layout_marginBottom="@dimen/big_margin_to_bg"
+        android:layout_marginLeft="@dimen/margin_to_bg"
+        android:layout_marginRight="@dimen/margin_to_bg">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="1">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:id="@+id/img_photo_sticker"
+                        android:src="@android:drawable/ic_menu_camera"
+                        android:enabled="false"
+                        android:background="@color/water"
+                        android:padding="5dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_weight="2" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/edit_btn"
+                        android:src="@drawable/pen"
+                        android:enabled="false"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignRight="@+id/ed_constellation"
+                android:layout_alignEnd="@+id/ed_constellation"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="UID:"
+                    android:id="@+id/textView5"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:textSize="@dimen/tv_title_size"
+                    android:textColor="@color/water" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:id="@+id/tv_uId"
+                    android:textColor="@color/brownText"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/textView5"
+                    android:layout_toEndOf="@+id/textView5"
+                    android:textSize="@dimen/ed_content_size"
+                    android:layout_marginLeft="30dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_photo_sticker"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="全名:"
+                    android:id="@+id/textView4"
+                    android:layout_below="@+id/textView5"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:textSize="@dimen/tv_title_size"
+                    android:textColor="@color/water" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:id="@+id/ed_full_name"
+                    android:textColor="@color/brownText"
+                    android:layout_above="@+id/ed_phone_number"
+                    android:layout_alignLeft="@+id/scrollView"
+                    android:layout_alignStart="@+id/scrollView"
+                    android:maxLength="20"
+                    android:enabled="false"
+                    android:text="@string/no_content"
+                    android:singleLine="true"
+                    android:nextFocusForward="@+id/spinner_constellation"
+                    android:textSize="@dimen/ed_content_size"
+                    android:layout_marginLeft="30dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linearLayout3"
+                android:layout_below="@+id/textView6"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="星座:"
+                    android:id="@+id/textView9"
+                    android:layout_below="@+id/textView8"
+                    android:layout_alignLeft="@+id/scrollView"
+                    android:layout_alignStart="@+id/scrollView"
+                    android:textSize="@dimen/tv_title_size"
+                    android:textColor="@color/water" />
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spinner_constellation"
+                    android:layout_marginLeft="30dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="電話:"
+                    android:id="@+id/textView6"
+                    android:layout_below="@+id/textView4"
+                    android:layout_toLeftOf="@+id/ed_address"
+                    android:layout_toStartOf="@+id/ed_address"
+                    android:textSize="@dimen/tv_title_size"
+                    android:textColor="@color/water" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:id="@+id/ed_phone_number"
+                    android:textColor="@color/brownText"
+                    android:layout_above="@+id/tv_birth_date"
+                    android:layout_alignRight="@+id/ed_personal_message"
+                    android:layout_alignEnd="@+id/ed_personal_message"
+                    android:inputType="phone"
+                    android:maxLength="15"
+                    android:enabled="false"
+                    android:text="@string/no_content"
+                    android:singleLine="true"
+                    android:nextFocusForward="@+id/ed_address"
+                    android:textSize="@dimen/ed_content_size"
+                    android:layout_marginLeft="30dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="地址:"
+                    android:id="@+id/textView8"
+                    android:layout_alignTop="@+id/tv_birth_date"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:textSize="@dimen/tv_title_size"
+                    android:textColor="@color/water" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:id="@+id/ed_address"
+                    android:textColor="@color/brownText"
+                    android:inputType="textPostalAddress|textMultiLine"
+                    android:layout_alignBottom="@+id/textView6"
+                    android:layout_toRightOf="@+id/textView4"
+                    android:layout_toEndOf="@+id/textView4"
+                    android:enabled="false"
+                    android:maxLength="@integer/address_length"
+                    android:text="@string/no_content"
+                    android:imeOptions="actionDone"
+                    android:maxLines="@integer/address_line_max"
+                    android:textSize="@dimen/ed_content_size"
+                    android:layout_marginLeft="30dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:weightSum="1"
+                android:layout_marginLeft="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="生日:"
+                    android:id="@+id/textView7"
+                    android:layout_below="@+id/textView4"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:textSize="@dimen/tv_title_size"
+                    android:textColor="@color/water" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:id="@+id/tv_birth_date"
+                    android:layout_marginLeft="30dp"
+                    android:textColor="@color/brownText"
+                    android:enabled="false"
+                    android:text="@string/no_content"
+                    android:textSize="@dimen/ed_content_size" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="個人留言:"
+                    android:id="@+id/textView10"
+                    android:layout_above="@+id/ed_personal_message"
+                    android:layout_alignLeft="@+id/scrollView"
+                    android:layout_alignStart="@+id/scrollView"
+                    android:textSize="@dimen/tv_title_size"
+                    android:textColor="@color/water" />
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:ems="10"
+                    android:id="@+id/ed_personal_message"
+                    android:textColor="@color/brownText"
+                    android:text="@string/no_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:maxLength="500"
+                    android:enabled="false"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:imeOptions="actionDone"
+                    android:textSize="@dimen/ed_content_size"
+                    android:layout_marginLeft="30dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

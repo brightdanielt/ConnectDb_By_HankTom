@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+
+    <color name="colorPrimaryDark">#303F9F</color>
+
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="brownText">#523f0b</color>
+
+    <color name="normal_layout_stroke">#b7bfa252</color>
+
+    <color name="normal_layout_bg">#48c4b486</color>
+
+    <color name="date">#dc458feb</color>
+
+    <color name="title">#336ffc</color>
+
+    <color name="diary_text_bg">#70fdecac</color>
+
+    <color name="simple_diary_text">#cb464e66</color>
+
+    <color name="diary_text">#cb182449</color>
+    
+    <color name="transparent">#6dff6969</color>
+
+    <color name="alpha170_blue">#b7cee7</color>
+
+    <color name="drawer_item_text">#381f00</color>
+
+    <color name="black">#000000</color>
+
+    <color name="white">#ffffff</color>
+
+    <color name="water">#34bad7</color>
+
+    <color name="pink_red">#ff00b7</color>
+
+    <color name="red">#ff0004</color>
+
+    <color name="light_green">#f7fff9</color>
+
+    <color name="green">#baffc9</color>
+
+    <color name="light_blue">#9ce8ff</color>
+
+    <color name="light2_blue">#d2f9ff</color>
+
+
+</resources>

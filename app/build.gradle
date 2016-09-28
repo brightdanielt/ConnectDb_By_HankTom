@@ -1,0 +1,70 @@
+apply plugin: 'com.android.application'
+
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+    defaultConfig {
+        applicationId 'com.example.danielt.my_diary'
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    /*HttpClient在SDK23之後不支援，必須加入以下*/
+    useLibrary 'org.apache.http.legacy'
+    /*導入Jackson函式庫時因為它將功能拆解成兩個函式庫，而這兩個都有一些版權宣告的文字檔案，這樣會造成最後編譯時的檔案
+    *衝突的錯誤而無法編譯，請在同一個build.gradle中的「android」區塊內，再加入排除這些檔案的packagingOptions區塊
+    *與其內部的exclude語法，如下：
+    */
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+        exclude 'META-INF/ASL2.0'
+    }
+    productFlavors {
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support:design:23.4.0'
+    /*加入OkHttp的函式庫名稱與版本
+        *OkHttp的特色為：
+        *支援HTTP/2，讓連到一個主機的多個要求都能共用一個socket通道
+        *使用連接池(Connection Pool)以降低產生要求時的延遲時間
+        *使用GZIP壓縮技術降低下載的資料大小
+        *回應的快取機制以避免多次連至同一網址時的負荷/
+         */
+    compile 'com.squareup.okhttp3:okhttp:3.2.0'
+    /*處理JSON格式資料時更有效率的函式庫
+        *Gson是由Google所提供處理JSON格式的函式庫，但並未內建在Android中
+        * */
+    compile 'com.squareup.okhttp3:okhttp:3.2.0'
+    compile 'com.google.code.gson:gson:2.6.2'
+    /*
+        *「FasterXML Jackson」（簡稱Jackson）是目前開放源碼專案中有著高效率特色的函式庫之一，常使用在許多應用程式中，它的官方網站為：
+        * https://github.com/FasterXML/jackson
+        * */
+    compile 'org.codehaus.jackson:jackson-mapper-asl:1.9.13'
+    compile 'org.codehaus.jackson:jackson-core-asl:1.9.13'
+    /*HttpClient在SDK23之後不支援，必須加入以下*/
+    compile 'org.apache.httpcomponents:httpcore:4.4.1'
+    compile 'org.apache.httpcomponents:httpclient:4.5'
+}
